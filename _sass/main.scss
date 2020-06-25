@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "Geo Sans Light";
+  src: url("../assets/GeosansLight.ttf") format("truetype");
+}
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+$family-sans-serif: "Geo Sans Light", "Helvetica", "Arial", sans-serif;
+$button-border-width: 0;
+
+@import "../node_modules/bulma/bulma";
+
+.transparent-bg {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+#hello .button {
+  background-image: url(../assets/watercolor2.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: inherit;
+}
+
+#hello .is-hidden-mobile img {
+  max-height: 20em;
+}
+
+#hello .is-hidden-tablet img {
+  max-height: 1em;
+  position: absolute;
+  margin-top: -0.75em;
+  margin-left: 0.5em;
+}

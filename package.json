@@ -1,0 +1,33 @@
+{
+  "name": "kataeskristof",
+  "version": "1.0.0",
+  "description": "static site with bulma",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "css-deploy": "npm run css-build && npm run css-postcss",
+    "css-build": "node-sass _sass/main.scss docs/css/main.css",
+    "css-postcss": "postcss --use autoprefixer --output docs/css/main.css docs/css/main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "deploy": "npm run css-deploy",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kszalontai/kataeskristof.git"
+  },
+  "author": "kszalontai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kszalontai/kataeskristof/issues"
+  },
+  "homepage": "https://github.com/kszalontai/kataeskristof#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.4",
+    "bulma": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "postcss-cli": "^7.1.1"
+  }
+}
